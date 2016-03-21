@@ -1,0 +1,102 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+.header,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+/*  border-bottom: 1px solid #e5e5e5;*/
+  margin-bottom: 10px;
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+/*  border-top: 1px solid #e5e5e5;*/
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+}
+
+.carousel-indicators {
+  li, .active {
+    background-color: #666666;
+  }
+}
+
+.carousel div {
+  h4, p{
+    color: #445588 ;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 1800px) {
+  .container {
+    max-width: 1800px;
+  }
+}
+
+@media (min-width: 1200px){
+  .carousel-indicators {
+    li {
+      width: 20px ;
+      height: 20px ;
+      border-radius: 20px;
+    }
+    .active {
+      width: 22px ;
+      height: 22px ;
+      border-radius: 22px;
+    }
+  }
+}
+
+@media(max-width: 730px){
+  /*padding between panels */
+  .page-content {
+    padding-bottom: 40px;
+  }
+}
