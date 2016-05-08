@@ -105,6 +105,11 @@ angular
         controller: 'TypeaheadCtrl',
         controllerAs: 'typeahead'
       })
+      .when('/resume', {
+        templateUrl: 'views/resume.html',
+        controller: 'ResumeCtrl',
+        controllerAs: 'vm'
+      })
       .otherwise({
         redirectTo: '/'
       });
