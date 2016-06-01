@@ -1,0 +1,13 @@
+<div class="row" ng-repeat="projectRow in card.projects">
+  <div class="col-sm-6 col-md-4" ng-repeat="project in projectRow">
+    <div class="thumbnail">
+      <img src="{{project.image}}" alt="..." height="200">
+      <div class="caption">
+        <h2>{{project.title}}</h2>
+        <p>{{project.description}}</p>
+        <p><a class="btn btn-primary" role="button" href="{{project.href}}">View this product <i class="glyphicon glyphicon-circle-arrow-right"></i></a></p>
+      </div>
+    </div>
+  </div>
+
+</div>

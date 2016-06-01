@@ -19,4 +19,6 @@ angular.module('bootstrapExApp')
         $window.alert('You\'ve selected the alert tab!');
       });
     };
+
+    $scope.contentlist = [1, 2, 3, 4];
   });

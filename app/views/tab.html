@@ -9,7 +9,16 @@
 <hr />
 
 <uib-tabset>
-  <uib-tab heading="Static title">Static content</uib-tab>
+  <uib-tab >
+    <uib-tab-heading>
+      <p>Static title</p>
+     </uib-tab-heading>
+    <h1>book name</h1>
+    <p><strong>Static content</strong></p>
+    <ul>
+      <li ng-repeat="item in contentlist">{{item}}</li>
+    </ul>
+  </uib-tab>
   <uib-tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disable="tab.disabled">
     {{tab.content}}
   </uib-tab>

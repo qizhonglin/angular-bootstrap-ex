@@ -105,6 +105,21 @@ angular
         controller: 'TypeaheadCtrl',
         controllerAs: 'typeahead'
       })
+      .when('/card', {
+        templateUrl: 'views/card.html',
+        controller: 'CardCtrl',
+        controllerAs: 'card'
+      })
+      .when('/project-medical-image-visualization', {
+        templateUrl: 'views/project-medical-image-visualization.html',
+        controller: 'MedicalImageVisualizationCtrl',
+        controllerAs: 'vm'
+      })
+      .when('/project-bama', {
+        templateUrl: 'views/project-bama.html',
+        controller: 'BamaCtrl',
+        controllerAs: 'vm'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -128,11 +143,11 @@ angular.module('bootstrapExApp')
               a.parent().addClass('active');
             } else {
               a.parent().removeClass('active');
-            };
+            }
           });
         });
       }
-    }
+    };
   }]);
 
 

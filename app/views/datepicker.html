@@ -1,4 +1,20 @@
-  <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
+
+<h4>Formatting codes playground</h4>
+<p class="form-group">
+  <label>Define your format</label>
+  <input type="text" ng-model="simpleFormat" class="form-control">
+</p>
+<p class="form-group">
+  <label>Result</label>
+  <input type="text" ng-model="simpleDate" class="form-control" uib-datepicker-popup="{{simpleFormat}}">
+</p>
+
+
+<br />
+<br />
+
+
+<pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
 
   <h4>Inline</h4>
   <div style="display:inline-block; min-height:290px;">

@@ -9,10 +9,6 @@
  */
 angular.module('bootstrapExApp')
   .controller('MainCtrl', function ($scope) {
-      $scope.myInterval = 5000;
-      $scope.noWrapSlides = false;
-      $scope.slides = getSlides();
-
     function getSlides(){
       var slides = [] ;
       slides.push({
@@ -34,4 +30,10 @@ angular.module('bootstrapExApp')
 
       return slides ;
     }
+
+      $scope.myInterval = 5000;
+      $scope.noWrapSlides = false;
+      $scope.slides = getSlides();
+
+
   });

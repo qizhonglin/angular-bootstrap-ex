@@ -9,6 +9,9 @@
  */
 angular.module('bootstrapExApp')
   .controller('DatepickerCtrl', function ($scope) {
+    $scope.simpleFormat = 'yyyy/MM/dd';
+    $scope.simpleDate = new Date();
+
     $scope.today = function() {
       $scope.dt = new Date();
     };
@@ -29,7 +32,7 @@ angular.module('bootstrapExApp')
     $scope.toggleMin();
     $scope.maxDate = new Date(2020, 5, 22);
 
-    $scope.open = function($event) {
+    $scope.open = function() {
       $scope.status.opened = true;
     };
 
