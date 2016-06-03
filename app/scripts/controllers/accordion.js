@@ -9,7 +9,7 @@
  */
 angular.module('bootstrapExApp')
   .controller('AccordionCtrl', function ($scope) {
-    $scope.oneAtATime = true;
+    $scope.oneAtATime = false;
 
     $scope.groups = [
       {

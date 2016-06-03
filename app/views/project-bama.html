@@ -1,21 +1,18 @@
-<h1 class="center-block project-title">Integrated Health Management Cardiac Care Solutions</h1>
+<h1 class="center-block project-title">{{vm.projectTitle}}</h1>
 
-<p><span class="keywords">Keywords:</span><span ng-bind-html="vm.keywords"></span></p>
-<p><span class="keywords">Abstract:</span><span ng-bind-html="vm.abstract"></span></p>
+<h3 >Keywords:<small> {{vm.keywords}}</small></h3>
+<h3>Abstract:</h3>
+<p class="para-indent" ng-repeat="item in vm.abstract">{{item}}</p>
 
 <h2 class="page-header">Management Summary</h2>
 <div >
-  <p>Currently in China there are some issues related to heathcare. For example, the healthcare system is not optizimed like over burdened higher level hospitals and no GP system in place. Clinical and technology focus on treating health issues so it is difficult to monitor patients over time. The relationship between patients and physicians is poor. Even though Healthcare system is under pressure but change is initiated. In future prima-ry care system will spring up and hospitals will be vertically integrated. Clinical and tech-nology will focus on early detection, data integration and analysis. There is why govern-ment policies focus on prevention, evidence-based medicine, and healthy cities.</p>
-  <p>The project aims to integrate health management solution, which currently targets to Cardiac Care. The workflow is as follows: </p>
+  <p class="para-indent">{{vm.managementSummary.p1}}</p>
+  <p class="para-indent">{{vm.managementSummary.p2}}</p>
   <ul>
-    <li>cardiologist writes discharge plan via his tablet, nurse educates patient via pa-tient’s tablet during the discharge meeting. </li>
-    <li>Patient measures blood pressure/heart rate daily and records symptoms when they occur via his tablet</li>
-    <li>Patient brings his tablet to the CHC during follow-up meetings, the GP writes comments to the treatment plan if he makes a change</li>
-    <li>Patient brings his tablet to the hospital during follow-up meetings, the physician or nurse updates the treatment</li>
-    <li>Physician reviews all patient’s data and does research analysis via his tablet an-ytime</li>
+    <li ng-repeat="item in vm.managementSummary.ul">{{item}}</li>
   </ul>
-  <p>The solution adds benefits to all related people. Patient owns more information from and contact with their specialist. Patient’s family understands their parents’ current disease status easier. Cardiologist can collect data to get a better overview of patients’ status for better quality of care from patient at home and other care providers, in this case they can do clinical research. GP in CHC have more training and knowledge from L3 specialists and share workload from overburdened level 3 hospital.</p>
-  <p>Considering potential business models, the solution can be deployed and sold to hospitals as standalone. As platform the solution is scalable, more features can be added like clini-cal decision support, retrohab and data analysis etc.</p>
+  <p class="para-indent">{{vm.managementSummary.p3}}</p>
+  <p class="para-indent">{{vm.managementSummary.p4}}</p>
 </div>
 
 <h2 class="page-header">Scenario</h2>
@@ -30,12 +27,19 @@
 </uib-carousel>
 
 <h2 class="page-header">UI wireframe</h2>
-<uib-carousel class="carousel" interval="vm.interval" no-wrap="vm.noWrapSlides">
-  <uib-slide ng-repeat="slide in vm.uiwireframeSlides" active="slide.active" >
-    <img ng-src="{{slide.image}}" style="margin:auto;">
-    <div class="carousel-caption" ng-hide="true">
-      <h4>Slide {{$index}}</h4>
-      <p>{{slide.text}}</p>
-    </div>
-  </uib-slide>
-</uib-carousel>
+<div ng-repeat="portal in vm.portal">
+  <h3>{{portal.title}}</h3>
+  <ol>
+    <li ng-repeat="item in portal.workflow">{{item}}</li>
+  </ol>
+  <uib-carousel class="carousel" interval="vm.interval" no-wrap="vm.noWrapSlides">
+    <uib-slide ng-repeat="slide in portal.slides" active="slide.active" >
+      <img ng-src="{{slide.image}}" style="margin:auto;">
+      <div class="carousel-caption" ng-hide="true">
+        <h4>Slide {{$index}}</h4>
+        <p>{{slide.text}}</p>
+      </div>
+    </uib-slide>
+  </uib-carousel>
+</div>
+

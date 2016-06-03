@@ -56,6 +56,7 @@
           <li><a ng-href="#/tooltip">Tooltip</a></li>
           <li><a ng-href="#/typeahead">Typeahead</a></li>
           <li><a ng-href="#/card">Card</a></li>
+          <li><a ng-href="#/resume">Resume</a></li>
         </ul>
       </div>
     </div>
@@ -63,6 +64,10 @@
 </div>
 
 <div class="container">
+  <div class="back-nav">
+    <a role="button" class="btn btn-link" ng-href="#/card"><i class="glyphicon glyphicon-circle-arrow-left"></i> Back to Project Overview</a>
+  </div>
+  <!--<div ng-view="" class="well center-block"></div>-->
   <div ng-view="" class="center-block"></div>
 </div>
 
@@ -91,6 +96,7 @@
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
+<script src="scripts/directives/scrollTo.js"></script>
 <script src="scripts/controllers/main.js"></script>
 <script src="scripts/controllers/about.js"></script>
 <script src="scripts/controllers/accordion.js"></script>
@@ -111,6 +117,10 @@
 <script src="scripts/controllers/card.js"></script>
 <script src="scripts/controllers/project-medical-image-visualization.js"></script>
 <script src="scripts/controllers/project-bama.js"></script>
+<script src="scripts/controllers/project-bigdata.js"></script>
+<script src="scripts/controllers/project-nlp.js"></script>
+<script src="scripts/controllers/project-breastCancer.js"></script>
+<script src="scripts/controllers/resume.js"></script>
 <!-- endbuild -->
 </body>
 </html>

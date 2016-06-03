@@ -29,24 +29,35 @@
     <uib-accordion-group heading="Static Header, initially expanded" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
       This content is straight in the template.
     </uib-accordion-group>
-    <uib-accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+    <uib-accordion-group heading="{{group.title}}" ng-repeat="group in groups" is-open="true">
       {{group.content}}
     </uib-accordion-group>
-    <uib-accordion-group heading="Dynamic Body Content">
+    <uib-accordion-group heading="Dynamic Body Content" is-open="true">
       <p>The body of the uib-accordion group grows to fit the contents</p>
       <button type="button" class="btn btn-default btn-sm" ng-click="addItem()">Add Item</button>
       <div ng-repeat="item in items">{{item}}</div>
     </uib-accordion-group>
-    <uib-accordion-group heading="Custom template" template-url="group-template.html">
+    <uib-accordion-group heading="Custom template" template-url="group-template.html" is-open="true">
       Hello
     </uib-accordion-group>
-    <uib-accordion-group heading="Delete account" panel-class="panel-danger">
+    <uib-accordion-group heading="Delete account" panel-class="panel-danger" is-open="true">
       <p>Please, to delete your account, click the button below</p>
       <button class="btn btn-danger">Delete</button>
     </uib-accordion-group>
     <uib-accordion-group is-open="status.open">
       <uib-accordion-heading>
         I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+      </uib-accordion-heading>
+      This is just some content to illustrate fancy headings.
+    </uib-accordion-group>
+    <uib-accordion-group is-open="true">
+      <uib-accordion-heading>
+        <div class="row">
+          <div class="col-md-3"><h4>experience.position</h4></div>
+          <div class="col-md-5"><h4>experience.company</h4></div>
+          <div class="col-md-4"><h4 class="text-right">experience.time</h4></div>
+        </div>
+
       </uib-accordion-heading>
       This is just some content to illustrate fancy headings.
     </uib-accordion-group>

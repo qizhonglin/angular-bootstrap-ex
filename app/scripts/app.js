@@ -120,6 +120,26 @@ angular
         controller: 'BamaCtrl',
         controllerAs: 'vm'
       })
+      .when('/project-bigdata', {
+        templateUrl: 'views/project-bigdata.html',
+        controller: 'BigDataCtrl',
+        controllerAs: 'vm'
+      })
+      .when('/project-nlp', {
+        templateUrl: 'views/project-bigdata.html',
+        controller: 'NlpCtrl',
+        controllerAs: 'vm'
+      })
+      .when('/project-breastCancer', {
+        templateUrl: 'views/project-bigdata.html',
+        controller: 'BreastCancerCtrl',
+        controllerAs: 'vm'
+      })
+      .when('/resume', {
+        templateUrl: 'views/resume.html',
+        controller: 'ResumeCtrl',
+        controllerAs: 'vm'
+      })
       .otherwise({
         redirectTo: '/'
       });
